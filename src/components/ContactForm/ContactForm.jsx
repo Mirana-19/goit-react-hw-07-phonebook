@@ -1,7 +1,8 @@
 import { Button, Title } from 'styles/Shared.styles';
 import { Input, Label, Phonebook } from './ContactForm.styled';
-import { addContact, selectContacts } from '../../redux/contacts/slice';
+import { selectContacts } from '../../redux/contacts/slice';
 import { useDispatch, useSelector } from 'react-redux';
+import { addContact } from '../../redux/contacts/operations';
 
 export function ContactForm() {
   const contacts = useSelector(selectContacts);
