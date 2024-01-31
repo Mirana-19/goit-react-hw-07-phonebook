@@ -5,12 +5,6 @@ const slice = createSlice({
   name: 'contacts',
   initialState: [],
 
-  reducers: {
-    deleteContact: (state, { payload }) => {
-      return state.filter(contact => contact.id !== payload);
-    },
-  },
-
   extraReducers: builder => {
     builder
       .addCase(fetchContact.fulfilled, (state, action) => {
