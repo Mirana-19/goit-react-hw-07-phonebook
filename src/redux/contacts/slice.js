@@ -11,7 +11,7 @@ const slice = createSlice({
         return action.payload;
       })
       .addCase(addContact.fulfilled, (state, action) => {
-        state.push(action.payload);
+        state.unshift(action.payload);
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
         return state.filter(contact => contact.id !== action.payload.id);
