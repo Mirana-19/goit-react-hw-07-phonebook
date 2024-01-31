@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Book = styled.ul`
   width: 400px;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 80px auto;
   padding: 20px;
   border: 1px solid gray;
   border-radius: 5px;
