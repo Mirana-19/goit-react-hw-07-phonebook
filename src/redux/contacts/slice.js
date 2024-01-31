@@ -7,14 +7,14 @@ const slice = createSlice({
 
   extraReducers: builder => {
     builder
-      .addCase(fetchContact.fulfilled, (state, action) => {
-        return action.payload;
+      .addCase(fetchContact.fulfilled, (state, { payload }) => {
+        return payload;
       })
-      .addCase(addContact.fulfilled, (state, action) => {
-        state.unshift(action.payload);
+      .addCase(addContact.fulfilled, (state, { payload }) => {
+        state.unshift(payload);
       })
-      .addCase(deleteContact.fulfilled, (state, action) => {
-        return state.filter(contact => contact.id !== action.payload.id);
+      .addCase(deleteContact.fulfilled, (state, { payload }) => {
+        return state.filter(contact => contact.id !== payload.id);
       })
       .addMatcher(
         isAnyOf(
@@ -22,7 +22,7 @@ const slice = createSlice({
           addContact.rejected,
           deleteContact.rejected
         ),
-        (state, action) => console.log(action.payload)
+        (state, { payload }) => console.log(payload)
       );
   },
 
