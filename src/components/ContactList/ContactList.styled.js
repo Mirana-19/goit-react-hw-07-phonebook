@@ -12,10 +12,14 @@ export const Item = styled.li`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  align-items: center;
   width: 400px;
   margin: 0 auto;
+  padding: 5px;
 `;
 
 export const Contact = styled.p`
+  display: flex;
+  flex-direction: column;
   width: 50%;
 `;
